@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Orbitron', sans-serif;
+
+}
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #f59e0b; /* amber-500 */
+    transition: width 0.4s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+  }
+  .border-anim {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    color: #b4b8c0;
+    overflow: hidden;
+  }
+
+  .border-anim::before,
+  .border-anim::after,
+  .border-anim span::before,
+  .border-anim span::after {
+    content: "";
+    position: absolute;
+    background-color:#2D2E30;
+    transition: all 0.4s ease;
+  }
+
+  /* Top-left and bottom-right corners initially */
+  .border-anim::before {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+  }
+  .border-anim::after {
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 2px;
+  }
+  .border-anim span::before {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 20px;
+  }
+  .border-anim span::after {
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 20px;
+  }
+
+  /* On hover - full border animation */
+  .border-anim:hover::before,
+  .border-anim:hover::after {
+    width: 100%;
+  }
+  .border-anim:hover span::before,
+  .border-anim:hover span::after {
+    height: 100%;
+  }
+
+  .arrow-anim {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    color: #b4b8c0;
+    overflow: hidden;
+  }
+
+  .arrow-anim::before,
+  .arrow-anim::after,
+  .arrow-anim span::before,
+  .arrow-anim span::after {
+    content: "";
+    position: absolute;
+    background-color: #2D2E30;
+    transition: all 0.4s ease;
+  }
+
+  .arrow-anim::before {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+  }
+
+  .arrow-anim::after {
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 2px;
+  }
+
+  .arrow-anim span::before {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 20px;
+  }
+
+  .arrow-anim span::after {
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 20px;
+  }
+
+  .arrow-anim:hover::before,
+  .arrow-anim:hover::after {
+    width: 100%;
+  }
+
+  .arrow-anim:hover span::before,
+  .arrow-anim:hover span::after {
+    height: 100%;
+  }
